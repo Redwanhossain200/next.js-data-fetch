@@ -1,13 +1,14 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Header = () => {
   const links = (
     <>
       <li>
-        <a>Item 1</a>
+        <Link href="/">Home</Link>
       </li>
       <li>
-        <a>Item 2</a>
+        <Link href="/posts">Posts</Link>
       </li>
     </>
   );
