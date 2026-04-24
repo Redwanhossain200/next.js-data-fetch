@@ -25,3 +25,30 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ffb26f black;
+}
+.animate-text {
+  background: linear-gradient(
+    to right,
+    #b026ff,
+    #ff5c8a,
+    #ffb26f,
+    #b026ff,
+    #ff5c8a,
+    #ffb26f
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 2s linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}

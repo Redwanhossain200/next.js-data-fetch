@@ -19,8 +19,17 @@ const PostsPage = async () => {
   const posts = await getPosts();
 
   return (
-    <div>
-      <h2>Post are coming soon:{posts.length}</h2>
+    <div className="container mx-auto p-6">
+      <div className="grid grid-cols-4 gap-6">
+        {posts.map((post) => (
+          <div
+            key={post.id}
+            className="bg-transparent border border-fuchsia-300 rounded-xl p-4 shadow-md">
+            <h3 className="text-lg font-bold mb-5">{post.title}</h3>
+            <p className="text-gray-600">{post.body}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
